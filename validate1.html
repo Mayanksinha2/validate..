@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script type="text/javascript">
+        function validate(){
+            indexin =document.resume.email.value.indexof("@");
+            agein=document.resume.age.value;
+            namein=document.resume.name10.value;
+            if(indexin==-1){
+                alert("The email id entered is invalid");
+                return false;
+            }
+            if(agein<1 || agein>150 ){
+                alert(" The age is not entered correctly.Please reenter.");
+                return false;
+            }
+            if(namein.length>10){
+                alert("The maximum length allowed for name is 10. Please reenter");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h4>This form to design to illustrate the data validation practices in javascript by c.Xavier.</h4>
+    <form name="resume" onsubmit="return validate ()">
+    <h5>Enter your e-mail:
+    <input type="text" name="email">
+    <br>
+    Enter your age.
+    <input type="text" name="age">
+    <br>
+    Enter your first name, max 10 letters:
+    <input type="text" name="name10">
+    <br>
+    <input type="submit" value="Proceed">
+    </h5>
+    </form>
+</body>
+
+</html>
